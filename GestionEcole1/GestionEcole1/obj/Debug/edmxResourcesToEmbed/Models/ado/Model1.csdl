@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GestionEcole1.Data.NhlContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Enseignant">
+    <Key>
+      <PropertyRef Name="Indice" />
+    </Key>
+    <Property Name="Indice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Prenom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="Int32" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DatePriseDeFonction" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DepartementId" Type="Int32" Nullable="false" />
+    <Property Name="MatiereId" Type="Int32" Nullable="false" />
+    <Property Name="Departement1_Id" Type="Int32" />
+    <Property Name="Departement_Id" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="BdModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Enseignant" EntityType="Self.Enseignant" />
+  </EntityContainer>
+</Schema>
